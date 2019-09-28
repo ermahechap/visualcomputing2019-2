@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="gst1-java-core-1.1.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Desktop/Processing/Libs/video/library/gst1-java-core-1.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/Processing/Libs/video/library/jna.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/Processing/Libs/video/library/video.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
