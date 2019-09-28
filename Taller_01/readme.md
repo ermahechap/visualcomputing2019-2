@@ -31,7 +31,9 @@ Completar la tabla:
 
 | Integrante | github nick |
 |------------|-------------|
-|            |             |
+|Diego Said Niquefa Velásquez|niquefaDiego|
+|Juan Diego Moreno|judmorenomo|
+|Edwin Ricardo Mahecha Parra|ermahechap|
 
 ## Discusión
 
