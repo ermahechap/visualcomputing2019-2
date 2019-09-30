@@ -114,15 +114,13 @@ A continuación se muestra una serie de ejemplos con el comportamiento esperado.
 
 Ambos ejemplos fueron realizados con el kernel de detección de bordes
 
-$$
-\quad
-\begin{bmatrix}
--1 & -1 & -1 \\
--1 & 8 & -1 \\
--1 & -1 & -1
-\end{bmatrix}
-\quad
-$$
+```java  
+  float[] kernel = {
+        -1, -1, -1,
+        -1, 8, -1,
+        -1, -1, -1
+  };
+  ```
 
 
 ## Otros recursos
