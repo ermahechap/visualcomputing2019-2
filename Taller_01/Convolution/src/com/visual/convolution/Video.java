@@ -27,7 +27,7 @@ public class Video extends PApplet{
     }
 
     public void setup(){
-        frameRate(30);
+        frameRate(120);
         mov = new Movie(this, path);
         mov.loop();
 

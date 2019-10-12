@@ -42,14 +42,14 @@ public class Image extends PApplet{
 
         pg2.beginDraw();
             pg2.image(img,0,0);
-            decolorizeGraphics(pg2,0,0);
+            decolorizeGraphics(pg2,1,0);
             drawHist(histGraphics, pg2);
             convoluteGraphics(pg2);
         pg2.endDraw();
 
         pg3.beginDraw();
             pg3.image(img,0,0);
-            decolorizeGraphics(pg3,0,1);
+            decolorizeGraphics(pg3,1,1);
         pg3.endDraw();
 
 
@@ -119,9 +119,9 @@ public class Image extends PApplet{
         //Good kernel guide http://setosa.io/ev/image-kernels/
         int m_size=3; //please, just odd matrix
         float[] kernel = {
-                -1, -1, -1,
-                -1, 8, -1,
-                -1, -1, -1
+                0, 0, 0,
+                0, 1, 0,
+                0, 0, 0
         };
 
 
