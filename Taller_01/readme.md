@@ -114,16 +114,14 @@ A continuación se muestra una serie de ejemplos con el comportamiento esperado.
 
 Ambos ejemplos fueron realizados con el kernel de detección de bordes
 
-$$
-\quad
-\begin{bmatrix}
--1 & -1 & -1 \\
--1 & 8 & -1 \\
--1 & -1 & -1
-\end{bmatrix}
-\quad
-$$
-
+```java  
+  float[] kernel = {
+        -1, -1, -1,
+        -1, 8, -1,
+        -1, -1, -1
+  };
+  ```
+Para el video se estableció un limite de fps de 30, y se calculo el promedio de fps, obteniendo el resultado de 28, así mismo, si incrementó el limite a 60 fps y se obtuvo un promedio de 58 fps.
 
 ## Otros recursos
 * [Visualización de kernels](http://setosa.io/ev/image-kernels/)
