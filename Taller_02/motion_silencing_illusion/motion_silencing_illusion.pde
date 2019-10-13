@@ -19,7 +19,7 @@ A/D - Increase/Decrease Twitching(or color change) speed
 Click over the screen canvas changes direction of rotation.
 
 IMPORTANT: IF THERE IS SOME PROBLEM WITH GENERATION OF PATTERNS RELATED WITH THE SEED,
-CHANGE IT WITH A STATIC VALUE
+CHANGE IT TO A STATIC VALUE
 
 */
 
