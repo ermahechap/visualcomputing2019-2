@@ -36,7 +36,7 @@ Complete la tabla:
 1. Describa brevememente las referencias estudiadas y los posibles temas en los que le gustaría profundizar
 * http://visionlab.harvard.edu/silencing/ - Muestra en detalle *Motion Silencing Illusion* y sus variaciones. En este sitio se puede encontrar el paper que presenta a la ilusión.
 * https://brightside.me/wonder-curiosities/26-weird-optical-illusions-that-will-challenge-your-brain-626960/ - Es un sition con varios ejemplos de ilusiones visuales.
-* http://visualcomputing.github.io/Cognitive/#/5/14 Se consultaron las ilusiones que estaban en la presentación, para las implementaciones se consultó el sitio oficial de processing, .
+* http://visualcomputing.github.io/Cognitive/#/5/14 Se consultaron las ilusiones que estaban en la presentación, para las implementaciones se consultó el sitio oficial de processing.
 ## Entrega
 
 * Plazo para hacer _push_ del repositorio a github: ~~6/10/19~~ 14/10/19 a las 24h.
