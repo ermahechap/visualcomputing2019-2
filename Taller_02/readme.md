@@ -30,8 +30,8 @@ Complete la tabla:
 | Bending Chess | Grid Illusions | [Website with several examples of illusions](https://brightside.me/wonder-curiosities/26-weird-optical-illusions-that-will-challenge-your-brain-626960/) | Click over the canvas shows/hides intersection crosses | - |
 | Colors | Other | https://blog.csdn.net/dev_csdn/article/details/78469354 | Click to start animation, one more click to restart | - |
 | Letters | Geometrical-Optical | https://blog.csdn.net/dev_csdn/article/details/78469354 | Click to go to the next step, there are 4 steps, one more click to restart | - |
-|         |           |            |                                    |                             |
-|         |           |            |                                    |                             |
+|Motion Binding illusion|  Optical |http://visualcomputing.github.io/Cognitive/#/5/25| Click makes the squares appear| |
+|Cafe Wall| Cognitive |http://visualcomputing.github.io/Cognitive/#/5/14 | Rows move according to mouse position |                             |
 
 1. Describa brevememente las referencias estudiadas y los posibles temas en los que le gustaría profundizar
 * http://visionlab.harvard.edu/silencing/ - Muestra en detalle *Motion Silencing Illusion* y sus variaciones. En este sitio se puede encontrar el paper que presenta a la ilusión.
