@@ -28,8 +28,8 @@ Complete la tabla:
 |---------|-----------|------------|------------------------------------|-----------------------------|
 | Motion Silencing Illusion | Otros/Visual Change |[variations of motion silencing](http://visionlab.harvard.edu/silencing/)| R - Regenerates pattern, C - Changes between modes, W/S - Increase/Decrease rotation speed, A/D - Increase/Decrease Twitching(or color shift) speed, Click over the canvas to change rotation direction| - |
 | Bending Chess | Grid Illusions | [Website with several examples of illusions](https://brightside.me/wonder-curiosities/26-weird-optical-illusions-that-will-challenge-your-brain-626960/) | Click over the canvas shows/hides intersection crosses | - |
-|         |           |            |                                    |                             |
-|         |           |            |                                    |                             |
+| Colors | Other | https://blog.csdn.net/dev_csdn/article/details/78469354 | Click to start animation, one more click to restart | - |
+| Letters | Geometrical-Optical | https://blog.csdn.net/dev_csdn/article/details/78469354 | Click to go to the next step, there are 4 steps, one more click to restart | - |
 |         |           |            |                                    |                             |
 |         |           |            |                                    |                             |
 
