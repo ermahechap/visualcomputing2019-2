@@ -112,8 +112,8 @@ void triangleRaster() {
   
   Vector p = new Vector();
   float[] barCoordinates = new float[3];
-  final int from = -(1 << (dim - 4));
-  final int to = (1 << (dim - 4));
+  final int to = Math.round((1<<dim) / node.scaling() / 2);
+  final int from = -to;
   for (int x = from; x < to; ++x) {
     for (int y = from; y < to; ++y) {
       p.setX(x + 0.5);
