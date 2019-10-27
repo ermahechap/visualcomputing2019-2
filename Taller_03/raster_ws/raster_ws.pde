@@ -49,6 +49,12 @@ String renderer = P2D;
 // 4. Window dimension
 int dim = 9;
 
+// 5. Antialisaing depth
+int antiAliasingDepth = 3;
+
+// 6. Draw raster?
+boolean raster = true;
+
 void settings() {
   size(int(pow(2, dim)), int(pow(2, dim)), renderer);
 }
@@ -88,7 +94,6 @@ void setup() {
 
 void draw() {
   background(0);
-  stroke(0, 255, 0);
   if (gridHint)
     scene.drawGrid(scene.radius(), (int)pow(2, n));
   if (triangleHint)
@@ -100,39 +105,57 @@ void draw() {
 }
 
 Vector[] triangle = new Vector[3];
+float[] barCoordinates = new float[3];
+
+Vector getPixelRGB(Vector pixelTopLeft, float size, int depth) {
+  if (depth == antiAliasingDepth) {
+    Vector pixelCenter = Vector.add( pixelTopLeft, new Vector(size/2, size/2, 0) );
+    if (pointInTriangle(pixelCenter, triangle[0], triangle[1], triangle[2])) {
+      calcBaricentricCoords(triangle, pixelCenter, barCoordinates);
+      return new Vector(
+        barCoordinates[0]*255,
+        barCoordinates[1]*255,
+        barCoordinates[2]*255
+      );
+    }
+    return new Vector(0, 0, 0);
+  }
+  size /= 2;
+  depth++;
+  Vector r = getPixelRGB(pixelTopLeft, size, depth);
+  r.add(getPixelRGB(Vector.add(pixelTopLeft, new Vector(size, 0)), size, depth));
+  r.add(getPixelRGB(Vector.add(pixelTopLeft, new Vector(0, size)), size, depth));
+  r.add(getPixelRGB(Vector.add(pixelTopLeft, new Vector(size, size)), size, depth));
+  r.divide(4);
+  return r;
+  
+}
 
 // Implement this function to rasterize the triangle.
 // Coordinates are given in the node system which has a dimension of 2^n
 void triangleRaster() {
-  // node.location converts points from world to node
-  // here we convert v1 to illustrate the idea
+  if (!raster) return;
+
   triangle[0] = node.location(v1);
   triangle[1] = node.location(v2);
   triangle[2] = node.location(v3);
   
   Vector p = new Vector();
-  float[] barCoordinates = new float[3];
   final int to = Math.round((1<<dim) / node.scaling() / 2);
   final int from = -to;
+  push();
+  noStroke();
   for (int x = from; x < to; ++x) {
     for (int y = from; y < to; ++y) {
-      p.setX(x + 0.5);
-      p.setY(y + 0.5);
-      if (pointInTriangle(p, triangle[0], triangle[1], triangle[2])) { 
-        push();
-        noStroke();
-        calcBaricentricCoords(triangle, p, barCoordinates);
-        fill(
-          barCoordinates[0]*255,
-          barCoordinates[1]*255,
-          barCoordinates[2]*255,
-          shadeHint ? 125 : 255
-        );
-        square(x + 0.5, y + 0.5, 1);
-        pop();
-      }
+      p.setX(x);
+      p.setY(y);
+      Vector c = getPixelRGB(p, 1, 0);
+      if (c.x() == 0 && c.y() == 0 && c.z() == 0) continue;
+      fill(c.x(), c.y(), c.z(), shadeHint ? 125 : 255 );
+      square(x + 0.5, y + 0.5, 1);
     }
   }
+  pop();
 }
 
 void randomizeTriangle() {
@@ -182,6 +205,8 @@ void drawTriangleHint() {
 }
 
 void keyPressed() {
+  if (key == '\n')
+    raster = !raster;
   if (key == 'g')
     gridHint = !gridHint;
   if (key == 't')
