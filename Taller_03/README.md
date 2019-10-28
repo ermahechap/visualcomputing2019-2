@@ -25,11 +25,18 @@ Complete la tabla:
 
 | Integrante | github nick |
 |------------|-------------|
-|            |             |
+|Diego Said Niquefa Velásquez|niquefaDiego|
+|Juan Diego Moreno|judmorenomo|
+|Edwin Ricardo Mahecha Parra|ermahechap|
+
 
 ## Discusión
 
-Describa los resultados obtenidos. En el caso de anti-aliasing describir las técnicas exploradas, citando las referencias.
+Hicimos anti-aliasing mediante la técnica de dividir el pixeles en subpixeles y asignar al pixel el color promedio de los subpixeles. Para esto usamos una función recursiva que en cada paso divide el pixel/subpixel en 4 y hace un llamado recursivo a cada uno, hasta llegar a profunidad 3. En el caso base de la recursión se determina si el centro del subpixel está en el triangulo, en caso de estarlo se determina el color del pixel mediante el uso de coordenadas baricéntricas, y en caso de no estarlo se toma el color negro (color de fondo). El color que retorna la función es el promedio de los colores en cada uno de las 4 divisiones.
+
+A simple vista el anti-aliasing al partir el pixel en 64 se ve suficientemente bueno, así que no parece valer la pena hacer más divisiones y perder eficiencia por esto.
+
+Referencia usada: https://www.scratchapixel.com/lessons/3d-basic-rendering/rasterization-practical-implementation/rasterization-stage
 
 ## Entrega
 
